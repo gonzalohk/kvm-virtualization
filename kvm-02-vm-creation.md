@@ -26,6 +26,12 @@ virt-install \
 ```
 
 ## Crear una maquina virtual en base a una imagen QCOW2
+Imagen .QCOW2 ejemplo
+
+- https://cloud.debian.org/images/cloud/buster/20200511-260/debian-10-nocloud-amd64-20200511-260.qcow2
+
+Copiamos y renombramos.
+
 ```
 virt-install --name servidordebian \
 --memory 1024 \
