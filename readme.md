@@ -1,7 +1,7 @@
 GNU/Linux permite virtualizar de forma nativa con un módulo denominado KVM, con las herramientas adecuadas como  QEMU y Libvirt nos permiten virtualizar sistemas operativos de manera sencilla y con en alto performance.
 
 <p align="center">
-![Virtualizacion KVM,QEMU y Libvirt](img/arquitectura-kvm.png?classes=center-block)
+<img src="img/arquitectura-kvm.png">
 </p>
 
 ## ¿Qué es KVM?
