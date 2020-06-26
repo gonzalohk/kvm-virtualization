@@ -1,23 +1,23 @@
-## Crear una nueva Red
+### Crear una nueva Red
 1. Mediante KVM MANAGER
 2. Mediante Archivos XML 
 
-## Mediante un archivo XML
+### Mediante un archivo XML
 ```
 virsh net-define archivo.xml
 ```
 
-### Listado de Redes
+Listado de Redes
 ```
 virsh net-list --all
 ```
 
-### Informacion de una red
+Informacion de una red
 ```
 virsh net-info default
 ```
 
-### Exportando XML
+Exportando XML
 ```
 virsh net-dumpxml default
 ```
@@ -39,28 +39,28 @@ virsh net-dumpxml default
 </network>
 ```
 
-## Gestion de Redes
-### Iniciar
+### Gestion de Redes
+Iniciar
 ```
 virsh net-start default
 ```
 
-### Detener
+Detener
 ```
 virsh net-destroy default
 ```
 
-### Autoiniciar
+Autoiniciar
 ```
 virsh net-autostart default
 ```
 
-## Editar configuración de Red
+### Editar configuración de Red
 ```
 virsh net-edit default
 ```
 
-### Asociar una RED a una VM (frio)
+Asociar una RED a una VM (frio)
 ```
 virsh attach-interface \
 --domain webserver01 \
@@ -70,7 +70,7 @@ virsh attach-interface \
 --config
 ```
 
-### Asociar una RED a una VM (caliente)
+Asociar una RED a una VM (caliente)
 ```
 virsh attach-interface \
 --domain webserver01 \
@@ -81,7 +81,7 @@ virsh attach-interface \
 --live
 ```
 
-### Desasociar una RED a una VM (caliente)
+Desasociar una RED a una VM (caliente)
 ```
 virsh detach-interface \
 --domain webserver01 \
@@ -92,12 +92,12 @@ virsh detach-interface \
 ```
 
 
-## Directorio de configuracion de redes
+Directorio de configuracion de redes
 ```
 /etc/libvirt/qemu/networks/
 ```
 
-## Detalle de redes de una VM
+Detalle de redes de una VM
 ```
 virsh domiflist webserver01
 ```

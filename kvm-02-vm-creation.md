@@ -1,9 +1,9 @@
-## Listado de SO y Variantes
+### Listado de SO y Variantes
 ```
 osinfo-query os
 ```
 
-## Crear un disco virtual
+### Crear un disco virtual
 ```
 qemu-img create \
 -f raw \
@@ -11,7 +11,8 @@ qemu-img create \
 /home/jperez/discos/miservidor.img
 ```
 
-## Crear la maquina virtual en base a una imagen ISO
+### Creacion
+Crer la maquina virtual en base a una imagen ISO
 ```
 crear la maquina virtual
 virt-install \
@@ -25,7 +26,8 @@ virt-install \
 --cdrom /home/jperez/imagenes/ubuntu18.04.iso
 ```
 
-## Crear una maquina virtual en base a una imagen QCOW2
+Crear una maquina virtual en base a una imagen QCOW2
+
 Imagen .QCOW2 ejemplo
 
 - https://cloud.debian.org/images/cloud/buster/20200511-260/debian-10-nocloud-amd64-20200511-260.qcow2
@@ -42,45 +44,45 @@ virt-install --name servidordebian \
 --noautoconsole
 ```
 
-## Clonar Maquinas Virtuales
+### Clonar Maquinas Virtuales
 ```
 virt-clone --original servidor01 --name servidor02 --auto-clone
 ```
 
-## Comando utiles
+### Comando utiles
 
-### Listado de maquinas virtuales activas
+Listado de maquinas virtuales activas
 ```
 virsh list
 ```
 
-### Listado de todas las maquinas virtuales
+Listado de todas las maquinas virtuales
 ```
 virsh list --all
 ```
 
-### Inicias una maquina virtual
+Inicias una maquina virtual
 ```
 virsh start servidordebian
 ```
 
-### Ver desde visualizador de maquinas virtuales
+Ver desde visualizador de maquinas virtuales
 ```
 virt-viewer servidordebian
 ```
 
-### Conectarse a una maquina
+Conectarse a una maquina
 ```
 virsh console servidordebian
 ```
 
-### Informacion de una imagen
+Informacion de una imagen
 ```
 qemu-img info centos.qcow2
 qemu-img info centos.img
 ```
 
-### Personalizacion de una imagen
+Personalizacion de una imagen
 ```
 virt-customize -a servidorcentos.qcow2 --root-password password:p4ssw0rd--uninstall cloud-init
 ```

@@ -1,9 +1,9 @@
-## Instalacion KVM
-### Debian
+### Instalacion KVM
+Debian
 ```
 apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin virt-viewer virt-manager 
 ```
-### Centos
+Centos
 ```
 yum groupinstall "Virtualization Host" -y
 ```
@@ -12,31 +12,31 @@ o
 yum install qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils libguestfs-tools
 ```
 
-### Validacion de requisitos en el host
+Validacion de requisitos en el host
 ```
 virt-host-validate
 ```
 
-### Informacion del host
+Informacion del host
 ```
 virsh nodeinfo
 ```
 
-## Gestion del servicio
-### Configuración desde el arranque
+### Gestion del servicio
+Configuración desde el arranque
 ```
 systemctl enable libvirtd
 ```
 
-### Iniciar
+Iniciar
 ```
 service libvirtd start
 ```
-### Detener
+Detener
 ```
 service libvirtd stop
 ```
-### Estado
+Estado
 ```
 service libvirtd status
 ```
