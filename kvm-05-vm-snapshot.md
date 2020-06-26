@@ -1,30 +1,32 @@
-LISTAR SNAPSHOT
+## Listar Snapshots
+```
 virsh snapshot-list webserver01
-
-DETALLE DE UN SNAPSHOT
+```
+### Detalle de un Snapshot
+```
 virsh snapshot-info webserver01 1555695775
-
-CREAR UN SNAPSHOT
+```
+## Crear un Snapshot
+```
 virsh snapshot-create webserver01
-
-CREAR SNAPSHOT PERSONALIZADO
+```
+## Crear un Snapshot personalizado
+```
 virsh snapshot-create-as webserver01 \
 --name "Snapshot 2" \
 --description"Segundo snapshot" \
 --atomic
-
-
-FLUJO DE DEPENDENCIAS
+```
+### Ver flujo de dependencias
+```
 virsh snapshot-list webserver01 --parent
-
 virsh snapshot-list webserver01 --tree
-
-
-ELIMINAR UN SNAPSHOT
+```
+## Eliminar un Snapshot
+```
 virsh snapshot-delete webserver01 1555695775
-
-REVERTIR UN SNAPSHOT
+```
+## Revertir un Snapshot
+```
 virsh snapshot-revert webserver01 --snapshotname "Snapshot 2"
-
-
-
+```
