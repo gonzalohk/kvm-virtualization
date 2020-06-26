@@ -1,9 +1,9 @@
-## Instalacion Debian
+## Instalacion KVM
+### Debian
 ```
 apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin virt-viewer virt-manager 
 ```
-
-## Instalacion Centos
+### Centos
 ```
 yum groupinstall "Virtualization Host" -y
 ```
@@ -12,12 +12,12 @@ o
 yum install qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils libguestfs-tools
 ```
 
-## Validacion de requisitos en el host
+### Validacion de requisitos en el host
 ```
 virt-host-validate
 ```
 
-## Informacion del host
+### Informacion del host
 ```
 virsh nodeinfo
 ```
